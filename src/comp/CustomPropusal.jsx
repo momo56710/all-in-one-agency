@@ -23,7 +23,7 @@ export default function CustomPropusal() {
       justify="center"
       id="contact"
       minH={'100vh'}
-      p={'3em 2em'}
+      p={'3em 5em'}
       color={'black'}
     >
       <Grid
@@ -35,7 +35,7 @@ export default function CustomPropusal() {
           md: '1fr',
           lg: 'repeat(2, 1fr)',
         }}
-        gap={{ base: '10em', lg: '2em' }}
+        gap={{ base: '3em', lg: '10em' }}
       >
         <Box justifySelf={'center'} alignSelf={'center'} align={'center'}>
           <Heading>

@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
-    "@putout/plugin-remove-unused-variables": "^5.0.0"
+    "@putout/plugin-remove-unused-variables": "^5.0.0",
+    "react-router-dom": "^6.10.0"
   }
 }

@@ -1,21 +1,25 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Box, ChakraProvider } from '@chakra-ui/react';
 import Nav from './comp/navfun/nav';
 import theme from './theme';
-import Hero from './comp/heading';
 import 'animate.css';
-import CustomPropusal from './comp/CustomPropusal';
-import OurServices from './comp/OurServices';
+import Footer from './comp/Footer';
+import Home from './comp/Home';
+import WebDEvelopment from './comp/WebDEvelopment';
 function App() {
   return (
     <ChakraProvider theme={theme}>
       <Box data-theme="light" fontSize={'13px'}>
         <Nav />
-        <Box maxW={'1400px'} m={'auto'}>
-          <Hero />
-        </Box>
-        <CustomPropusal />
-        <OurServices />
+        <BrowserRouter>
+          <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/services/web-development" element={<WebDEvelopment />}/>
+          </Routes>
+        </BrowserRouter>
+
+        <Footer />
       </Box>
     </ChakraProvider>
   );

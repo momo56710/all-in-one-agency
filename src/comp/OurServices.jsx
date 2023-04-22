@@ -39,7 +39,7 @@ export default function OurServices() {
       </Text>
   
       <Flex
-        justifyContent={'center'}
+        justifyContent={'space-around'}
         flexWrap={'wrap'}
         gap={'1em'}
       >

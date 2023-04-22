@@ -1,9 +1,9 @@
-import { Heading, Box, Center, Text, Image, Grid ,Button} from '@chakra-ui/react';
+import { Heading, Box, Text, Image,Button} from '@chakra-ui/react';
 export default function Card({image,title,description}) {
   return (
     <Box
       w={{base : '100%' , sm: '250px'}}
-      h={{base : 'fit-content' , md: '450px'}}
+      h={{base : 'fit-content' , sm: '450px'}}
      
       bg={'white'}
       display={'grid'}

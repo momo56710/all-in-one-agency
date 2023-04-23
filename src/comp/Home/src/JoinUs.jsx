@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function JoinUs() {
   return (
-    <Grid minH={'100vh'} alignItems={'center'} templateColumns={'1fr 1fr'} padding={'0 3em'} templateColumns={{base: "1fr",sm:"1fr 1fr"}}>
+    <Grid minH={'100vh'} alignItems={'center'} padding={'0 3em'} templateColumns={{base: "1fr",sm:"1fr 1fr"}}>
       <Image src={developerImg}/>
       <Grid gap={'3em'}>
         <Heading color={'#DFD3EB'}>Join us – 100% remote</Heading>

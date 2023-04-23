@@ -101,9 +101,8 @@ const DesktopNav = () => {
                   border={0}
                   boxShadow={'xl'}
                   p={4}
-                  rounded={'xl'}
                   minW={'sm'}
-                  bg={'#035990'}
+                  bg={'#45276D'}
                 >
                   <Stack>
                     {navItem.children.map(child => (

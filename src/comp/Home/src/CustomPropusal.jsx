@@ -14,6 +14,7 @@ import {
   Grid,
   VStack,
 } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import React from 'react';
 export default function CustomPropusal() {
   return (
@@ -38,14 +39,13 @@ export default function CustomPropusal() {
         gap={{ base: '3em', lg: '10em' }}
       >
         <Box justifySelf={'center'} alignSelf={'center'} align={'center'}>
-          <Heading>
-            MAKING THE MOST OF MEDIA MARKETING FOR YOUR BUSINESS
-          </Heading>
+          <Heading>More than just a digital Agency</Heading>
           <br></br>
           <Text>
-            BULKSUP is an All-in-One Digital marketing & management agency that
-            helps companies create a significant influence on the market. We
-            produce materials your customers will love it. <br /> #just work it
+            We directly partner with our clients every step of the way,
+            tailoring our approach to meet your business’ needs. We achieve real
+            world results with a completely transparent, analytical and process
+            oriented methodology.
           </Text>
         </Box>
         <Box>
@@ -111,18 +111,22 @@ export default function CustomPropusal() {
                       resize="none"
                     />
                   </FormControl>
-
-                  <Button
-                    colorScheme="blue"
-                    bg="blue.400"
-                    color="white"
-                    _hover={{
-                      bg: 'blue.500',
-                    }}
-                    isFullWidth
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
                   >
-                    Send Message
-                  </Button>
+                    <Button
+                      colorScheme="purple"
+                      bg="#683BA4"
+                      color="white"
+                      _hover={{
+                        bg: '#45276D',
+                      }}
+                      isFullWidth
+                    >
+                      Send Message
+                    </Button>
+                  </motion.button>
                 </VStack>
               </Box>
             </Stack>

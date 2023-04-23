@@ -1,11 +1,13 @@
 import { Heading, Box, Text, Image, Button, Grid } from '@chakra-ui/react';
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion} from 'framer-motion';
 export default function Card({ image, title, description }) {
+ 
   const [isOpen, steIsOpen] = useState(false);
   return (
     <Box display={'grid'} alignItems={'center'}>
       <motion.div
+        whileHover={{ scale: 1.1 }}
         onClick={() => {
           steIsOpen(!isOpen);
         }}
@@ -20,6 +22,9 @@ export default function Card({ image, title, description }) {
           color={'#683BA4'}
           rounded={'lg'}
           p={6}
+          _hover={{
+            cursor: 'pointer',
+          }}
         >
           <Box>
             <motion.div layout="position">
@@ -28,18 +33,19 @@ export default function Card({ image, title, description }) {
                 {title}
               </Heading>
             </motion.div>
-           
+
             {isOpen && (
               <>
-               <br /><br />
-              <Grid gap={'2em'}>
-                <motion.div>{description}</motion.div>
-                <motion.div>
-                  <Box textAlign={'center'}>
-                    <Button>Learn more</Button>
-                  </Box>
-                </motion.div>
-              </Grid>
+                <br />
+                <br />
+                <Grid gap={'2em'}>
+                  <motion.div>{description}</motion.div>
+                  <motion.div>
+                    <Box textAlign={'center'}>
+                      <Button>Learn more</Button>
+                    </Box>
+                  </motion.div>
+                </Grid>
               </>
             )}
           </Box>

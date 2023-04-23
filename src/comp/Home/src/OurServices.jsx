@@ -5,7 +5,27 @@ import WebDevSvg from '../assets/web-development-svgrepo-com.svg';
 import digitalmarketing from '../assets/marketing-mobile-information-speaker-news-svgrepo-com.svg';
 import designService from '../assets/design-svgrepo-com.svg';
 import webHosting from '../assets/host-svgrepo-com.svg';
+import { motion, useInView } from 'framer-motion';
 export default function OurServices() {
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2
+      }
+    }
+  };
+  
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1
+    }
+  };
   const services = [
     {
       image: WebDevSvg,
@@ -37,7 +57,7 @@ export default function OurServices() {
       <Text align={'center'} fontSize={'2em'} padding={'3em 0'} fontWeight={'bold'}>
         ALL NECESSARY SERVICES FOR YOUR BRAND WAS INCLUDED IN ONE PLACE, HERE!
       </Text>
-  
+
       <Flex
         justifyContent={'space-around'}
         flexWrap={'wrap'}
@@ -46,6 +66,7 @@ export default function OurServices() {
       >
         {services.map(e => {
           return (
+    
             <Card image={e.image} title={e.title} description={e.description} />
           );
         })}

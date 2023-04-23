@@ -6,11 +6,12 @@ import {
   Stack,
 } from '@chakra-ui/react';
 import 'animate.css';
+import backgroundImg from '../assets/zyro-image.png'
 export default function Hero() {
   
   return (
     <>
-      <Container maxW={'4xl'} h={'100vh'} display={'grid'} alignItems={'center'} >
+      <Container maxW={'100vw'} h={'100vh'} display={'grid'} alignItems={'center'}>
         <Stack
           as={Box}
           textAlign={'center'}

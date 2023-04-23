@@ -6,7 +6,7 @@ import theme from './theme';
 import 'animate.css';
 import Footer from './comp/Footer';
 import Home from './comp/Home';
-import WebDEvelopment from './comp/WebDEvelopment';
+import WebDevelopment from './comp/WebDevelopment';
 function App() {
   return (
     <ChakraProvider theme={theme}>
@@ -15,7 +15,7 @@ function App() {
         <BrowserRouter>
           <Routes>
           <Route path="/" element={<Home />}/>
-          <Route path="/services/web-development" element={<WebDEvelopment />}/>
+          <Route path="/services/web-development" element={<WebDevelopment />}/>
           </Routes>
         </BrowserRouter>
 

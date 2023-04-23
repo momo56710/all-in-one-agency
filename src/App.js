@@ -5,7 +5,7 @@ import Nav from './comp/navfun/nav';
 import theme from './theme';
 import 'animate.css';
 import Footer from './comp/Footer';
-import Home from './comp/Home';
+import Home from './comp/Home/Home';
 import WebDevelopment from './comp/WebDevelopment';
 function App() {
   return (

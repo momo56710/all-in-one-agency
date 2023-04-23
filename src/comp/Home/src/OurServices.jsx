@@ -42,6 +42,7 @@ export default function OurServices() {
         justifyContent={'space-around'}
         flexWrap={'wrap'}
         gap={'1em'}
+        minH={'70vh'}
       >
         {services.map(e => {
           return (

@@ -69,7 +69,7 @@ export default function CustomPropusal() {
             <Stack
               spacing={{ base: 4, md: 8, lg: 20 }}
               direction={{ base: 'column', md: 'row' }}
-              w={'80%'}
+              w={'100%'}
             >
               <Box borderRadius="lg" p={8} w={'100%'}>
                 <VStack spacing={5}>

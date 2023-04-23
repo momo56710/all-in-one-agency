@@ -4,7 +4,8 @@ import React from 'react';
 
 export default function JoinUs() {
   return (
-    <Grid minH={'100vh'} alignItems={'center'} templateColumns={'1fr 1fr'} padding={'0 3em'}>
+    <Grid minH={'100vh'} alignItems={'center'} templateColumns={'1fr 1fr'} padding={'0 3em'} templateColumns={{base: "1fr",sm:"1fr 1fr"}}>
+      <Image src={developerImg}/>
       <Grid gap={'3em'}>
         <Heading color={'#DFD3EB'}>Join us – 100% remote</Heading>
         <Text fontSize={'1.5em'} lineHeight={'200%'}>
@@ -12,9 +13,9 @@ export default function JoinUs() {
           blast. At All Around, we provide a structured career path to help
           everyone realize their potential.
         </Text>
-        <Box textAlign={'center'}><Button>Tell me more</Button></Box>
+        <Box textAlign={'center'}><Button variant='outline'>Tell me more</Button></Box>
       </Grid>
-      <Image src={developerImg}/>
+      
     </Grid>
   );
 }

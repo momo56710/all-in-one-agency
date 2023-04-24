@@ -1,8 +1,9 @@
 import { Heading, Box, Text, Image, Button, Grid } from '@chakra-ui/react';
 import { useState } from 'react';
-import { motion} from 'framer-motion';
-export default function Card({ image, title, description }) {
- 
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+export default function Card({ image, title, description,link }) {
+  const navigate = useNavigate()
   const [isOpen, steIsOpen] = useState(false);
   return (
     <Box display={'grid'} alignItems={'center'}>
@@ -42,7 +43,11 @@ export default function Card({ image, title, description }) {
                   <motion.div>{description}</motion.div>
                   <motion.div>
                     <Box textAlign={'center'}>
-                      <Button>Learn more</Button>
+                      <Button
+                       onClick={()=>{navigate(`/services/${link}`)}}
+                      >
+                        Learn more
+                      </Button>
                     </Box>
                   </motion.div>
                 </Grid>

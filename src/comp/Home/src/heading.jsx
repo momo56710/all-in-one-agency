@@ -1,17 +1,15 @@
-import {
-  Box,
-  Heading,
-  Container,
-  Text,
-  Stack,
-} from '@chakra-ui/react';
+import { Box, Heading, Container, Text, Stack } from '@chakra-ui/react';
 import 'animate.css';
-import backgroundImg from '../assets/zyro-image.png'
+import backgroundImg from '../assets/zyro-image.png';
 export default function Hero() {
-  
   return (
     <>
-      <Container maxW={'100vw'} h={'100vh'} display={'grid'} alignItems={'center'}>
+      <Container
+        maxW={'100vw'}
+        h={'100vh'}
+        display={'grid'}
+        alignItems={'center'}
+      >
         <Stack
           as={Box}
           textAlign={'center'}
@@ -36,8 +34,8 @@ export default function Hero() {
               ALL-IN-ONE DIGITAL MARKETING & MANAGEMENT AGENCY
             </Text>
           </Heading>
-     
         </Stack>
+       
       </Container>
     </>
   );

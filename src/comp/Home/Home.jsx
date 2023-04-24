@@ -8,13 +8,14 @@ import JoinUs from './src/JoinUs';
 export default function Home() {
   return (
     <>
+      
       <Box maxW={'1400px'} m={'auto'}>
         <Hero />
       </Box>
-      <AboutUs/>
+      <AboutUs />
       <CustomPropusal />
       <OurServices />
-      <JoinUs/>
+      <JoinUs />
     </>
   );
 }

@@ -10,7 +10,7 @@ import { motion, useAnimation } from 'framer-motion';
 import '../css/ourservices.css'
 export default function OurServices() {
   const {ref,inView} = useInView(
-    {threshold : 0.7}
+    {threshold : 1}
   )
   const animation = useAnimation()
   useEffect(()=>{

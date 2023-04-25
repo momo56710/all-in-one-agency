@@ -1,16 +1,15 @@
 import React, { useEffect } from 'react';
-import { Box, Text, Flex, transition } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import Card from './Card';
 import WebDevSvg from '../assets/web-development-svgrepo-com.svg';
 import digitalmarketing from '../assets/marketing-mobile-information-speaker-news-svgrepo-com.svg';
 import designService from '../assets/design-svgrepo-com.svg';
-import webHosting from '../assets/host-svgrepo-com.svg';
-import { InView, useInView } from 'react-intersection-observer';
+import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
 import '../css/ourservices.css'
 export default function OurServices() {
   const {ref,inView} = useInView(
-    {threshold : 1}
+    {threshold : 0.5}
   )
   const animation = useAnimation()
   useEffect(()=>{
@@ -21,31 +20,13 @@ export default function OurServices() {
         opacity :1,
         transition : {
             type : 'spring',
-            duration : 1   
+            duration : 0.5   
         }
       })
     }
 
   },[inView])
-  const container = {
-    hidden: { opacity: 1, scale: 0 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const item = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-    },
-  };
+  
   const services = [
     {
       image: WebDevSvg,
@@ -59,14 +40,14 @@ export default function OurServices() {
       title: 'SOCIAL MEDIA MANAGE',
       description:
         'Our skilled team of social marketers will create, manage, and deliver top-performing social media campaigns for your business.',
-      link: 'digital-marketing',
+      link: '#',
     },
     {
       image: designService,
       title: 'BRAND ARCHITECTURE',
       description:
         'Branding is about the feeling people have when they encounter you. It’s about creating a meaningful connection with your audience.',
-      link: 'graphic-design',
+      link: '#',
     },
   ];
   return (

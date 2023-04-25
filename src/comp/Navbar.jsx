@@ -21,7 +21,9 @@ import {
   ChevronRightIcon,
 } from '@chakra-ui/icons';
 import logo from '../assets/logo light.png';
+import { useNavigate } from 'react-router-dom';
 export default function Navbar() {
+  const navigate = useNavigate()
   const { isOpen, onToggle } = useDisclosure();
   return (
 
@@ -56,7 +58,7 @@ export default function Navbar() {
             justify={{ base: 'center', md: 'start' }}
             align={'center'}
           >
-            <Image src={logo} h={'30px'} />
+            <Image src={logo} h={'30px'} _hover={{cursor : "pointer"}} onClick={()=>{navigate(`/`)}}/>
 
            
           </Flex>

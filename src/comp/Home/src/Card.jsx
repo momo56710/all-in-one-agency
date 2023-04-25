@@ -44,7 +44,7 @@ export default function Card({ image, title, description,link }) {
                   <motion.div>
                     <Box textAlign={'center'}>
                       <Button
-                       onClick={()=>{navigate(`/services/${link}`)}}
+                       onClick={()=>{navigate(`services/${link}`)}}
                       >
                         Learn more
                       </Button>

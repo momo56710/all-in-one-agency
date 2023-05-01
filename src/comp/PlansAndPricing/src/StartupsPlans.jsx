@@ -47,14 +47,14 @@ export default function StartupsPlans() {
       <Heading textAlign={'center'} fontWeight={400} paddingBottom={'2em'}>
         OUR PLANS FOR STARTUPS
       </Heading>
-      <Flex justifyContent={'space-around'}>
+      <Flex justifyContent={'space-around'} flexWrap={'wrap'} gap={'1em'}>
         {cardsContent.map(e=>{
           return (
             <Cards price={e.price} month={e.month} title={e.title} Specs={e.Specs}/>
           )
         })}
       </Flex>
-      <Box textAlign={'center'} marginTop={'3em'}><Button fontSize={'1.5em'} padding={'2em 2em'}>OR JOIN BULKSUP PROGRAM</Button></Box>
+      <Box textAlign={'center'} marginTop={'3em'}><Button fontSize={'1.5em'} bg={'purple.400'} padding={'2em 2em'}>OR JOIN BULKSUP PROGRAM</Button></Box>
       
     </Box>
   );

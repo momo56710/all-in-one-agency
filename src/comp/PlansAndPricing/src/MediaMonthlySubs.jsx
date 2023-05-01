@@ -49,7 +49,7 @@ export default function MediaMonthlySubs() {
           <Heading textAlign={'center'} fontWeight={400} paddingBottom={'2em'}>
           SOCIAL MEDIA MANAGEMENT PLANS
           </Heading>
-          <Flex justifyContent={'space-around'}>
+          <Flex justifyContent={'space-around'} flexWrap={'wrap'} gap={'1em'}>
             {cardsContent.map(e=>{
               return (
                 <Cards price={e.price} month={e.month} title={e.title} Specs={e.Specs}/>

@@ -10,7 +10,7 @@ export default function Card({ image, title, description,link }) {
         whileHover={{ scale: 1.1 }}
       >
         <Box
-          w={{ base: '30vw' }}
+          w={{ base: '90vw',md:'30vw' }}
           h={'300px'}
           bg={'white'}
           display={'grid'}

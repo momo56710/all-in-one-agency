@@ -10,7 +10,7 @@ export default function FreeConsultation() {
       </Heading>
       <br />
       <br />
-      <Button>GET STARTED</Button>
+      <Button bg={'purple.400'}>GET STARTED</Button>
     </Box>
   );
 }

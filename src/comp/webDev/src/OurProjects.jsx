@@ -15,7 +15,6 @@ import PayApi2 from '../assets/payapi2.jpg';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 export default function OurProjects() {
-  const navigate = useNavigate();
   return (
     <Box bg={'white'} padding={'3em 2em'}>
       <Heading

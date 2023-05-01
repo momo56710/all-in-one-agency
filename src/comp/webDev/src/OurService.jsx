@@ -7,16 +7,16 @@ export default function OurService() {
       <Grid
         gridTemplateColumns={{ base: '1fr', md: '1fr 1fr' }}
         alignItems={'center'}
-        minH={'100vh'}
         gap={'2em'}
-        padding={'0 2em'}
+        padding={'8em 2em'}
         lineHeight={'2em'}
       >
-         <Heading fontSize={'1.5em'} gridColumn={'span 2'} textAlign={'center'}>
+         <Heading fontSize={'2em'} gridColumn={{base : 'span 1',md : 'span 2'}} textAlign={'center'} paddingBottom={'3em'}>
             OUR WEB DESIGN SERVICES HELPS YOUR BUSINESS GROW BY DOING THE
             FOLLOWING:
           </Heading>
-        <Image src={WebDesignPic} w={'80%'}/>
+          
+        <Image src={WebDesignPic}/>
         <Box>
           <Heading fontSize={'1em'}>
             DELIVER A WEBSITE EXPERIENCE YOUR VISITORS WILL LOVE:

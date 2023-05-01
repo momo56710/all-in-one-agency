@@ -230,20 +230,17 @@ const NAV_ITEMS = [
       },
       {
         label: 'Design services',
-        href: '#',
-      },
-      {
-        label: 'web hosting',
-        href: '#',
+        href: '/services/design',
       },
       {
         label: 'Social media mangement',
-        href: '#',
+        href: '/services/Social-media-management',
       },
     ],
   },
   {
     label: 'plans and pricing',
+    href: '/plans-and-pricing',
   },
   {
     label: 'Blog',

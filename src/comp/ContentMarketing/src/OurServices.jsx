@@ -1,9 +1,6 @@
 import React, { useEffect } from 'react';
 import { Box, Text } from '@chakra-ui/react';
 import Card from './Card';
-import WebDevSvg from '../assets/web-development-svgrepo-com.svg';
-import digitalmarketing from '../assets/marketing-mobile-information-speaker-news-svgrepo-com.svg';
-import designService from '../assets/design-svgrepo-com.svg';
 import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
 import '../css/ourservices.css'
@@ -29,44 +26,40 @@ export default function OurServices() {
   
   const services = [
     {
-      image: WebDevSvg,
-      title: 'WEB DEVELOPMENT',
+      title: 'Performance Marketing',
       description:
         'We design websites that help you generate the most conversions. We do this by delivering an attractive design, responsive theme, and user-friendly website.',
-      link: 'web-development',
+
     },
    
     {
-      image: designService,
-      title: 'BRAND ARCHITECTURE',
+      title: 'Analytics',
       description:
-        'Branding is about the feeling people have when they encounter you. It’s about creating a meaningful connection with your audience.',
-      link: 'design',
+        'We work with a great analytics setup to deliver the best ROAS and scale. We help you get started, but also develop a custom-made reporting for your app ads based on Big Query & Tableau.',
+    
     },
     {
-      image: digitalmarketing,
-      title: 'SOCIAL MEDIA MANAGE',
+      title: 'Creatives',
       description:
-        'Our skilled team of social marketers will create, manage, and deliver top-performing social media campaigns for your business.',
-      link: 'Social-media-management',
+        'From web banners to animated video production – we brainstorm ideas and bring them to life. Whatever it takes to boost your app, brand, product, or service – have a look at our work and see how we make your app glow'
     },
   ];
   return (
-    <Box padding={'3em'}>
+    <Box padding={'3em'} background={'white'} >
       <Text
         align={'center'}
         fontSize={'2em'}
-        padding={'3em 0'}
         fontWeight={'bold'}
+        textColor={'black'}
+        paddingBottom={'3em'}
       >
-        ALL NECESSARY SERVICES FOR YOUR BRAND WAS INCLUDED IN ONE PLACE, HERE!
+        OUR SERVICES
       </Text>
 
         <motion.div className='flex'  ref={ref} initial={{y : -100 , opacity : 0}} animate={animation}>
         {services.map(e => {
           return (
             <Card
-              image={e.image}
               title={e.title}
               description={e.description}
               link={e.link}

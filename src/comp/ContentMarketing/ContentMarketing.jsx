@@ -1,18 +1,19 @@
+import { Box, Heading } from '@chakra-ui/react';
 import React, { useEffect } from 'react';
 import Hero from './src/heading';
-import OurProjects from './src/OurProjects';
-import OurService from './src/OurService';
+import OurServices from './src/OurServices';
+import HowWeWork from './src/HowWeWork';
 import PlansAndPricingBtn from '../PlansAndPricingBtn';
-export default function WebDev() {
+export default function ContentMarketing() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <>
+    <Box>
       <PlansAndPricingBtn />
       <Hero />
-      <OurProjects />
-      <OurService />
-    </>
+      <OurServices />
+      <HowWeWork />
+    </Box>
   );
 }

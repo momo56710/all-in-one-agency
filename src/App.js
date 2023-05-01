@@ -4,7 +4,6 @@ import Nav from './comp/navfun/nav';
 import theme from './theme';
 import 'animate.css';
 import Footer from './comp/Footer';
-
 import RoutesRoot from './routes';
 import { BrowserRouter } from 'react-router-dom';
 function App() {
@@ -12,6 +11,7 @@ function App() {
     <ChakraProvider theme={theme}>
       <Box data-theme="light" fontSize={'13px'}>
         <BrowserRouter>
+         
           <Nav />
           <RoutesRoot />
           <Footer />

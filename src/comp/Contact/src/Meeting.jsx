@@ -26,11 +26,14 @@ export default function Meeting() {
     >
       don't hesitate to reach out
     </Heading>
-    <Grid
+    <Box
       borderRadius={'lg'}
       border={'2px solid white'}
       w={{ base: '100%', md: '70%' }}
-      templateColumns={{ base: '1fr', lg: '1fr 1fr' }}
+      templateColumns={{
+        base: '1fr',
+        lg: 'repeat(2, 1fr)',
+      }}
       m={'5em auto'}
       alignItems={'center'}
     >
@@ -105,7 +108,7 @@ export default function Meeting() {
           </Stack>
         </Stack>
       </Flex>
-    </Grid>
+    </Box>
     <Heading
         fontWeight={'light'}
         gridColumn={'span 2'}

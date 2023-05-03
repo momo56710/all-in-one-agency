@@ -20,7 +20,7 @@ export default function Hero() {
             <Text
               className="animate__animated animate__fadeInDown"
               fontWeight={600}
-              fontSize={'2em'}
+              fontSize={'1.5em'}
               lineHeight={'110%'}
             >
               ACCELERATE YOUR WORK

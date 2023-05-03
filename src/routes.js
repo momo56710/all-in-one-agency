@@ -5,6 +5,7 @@ import WebDev from './comp/webDev/webDev';
 import Design from './comp/Design/Design';
 import ContentMarketing from './comp/ContentMarketing/ContentMarketing';
 import PlansAndPricing from './comp/PlansAndPricing/PlansAndPricing';
+import Contact from './comp/Contact/Contact';
 export default function RouteRoot() {
   return (
     <Routes>
@@ -13,6 +14,7 @@ export default function RouteRoot() {
       <Route path="/services/design" top element={<Design />} />
       <Route path="/services/Social-media-management" top element={<ContentMarketing />} />
       <Route path="/plans-and-pricing" top element={<PlansAndPricing />} />
+      <Route path="/Contact" top element={<Contact />} />
     </Routes>
   );
 }

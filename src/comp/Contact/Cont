@@ -1,0 +1,40 @@
+import { Box, Flex, Heading, Input, Text } from '@chakra-ui/react';
+import React from 'react';
+
+export default function Contact() {
+  return (
+    <Box minH={'100vh'} pt={'10em'}>
+      <Heading
+        className="animate__animated animate__fadeInDown"
+        fontWeight={600}
+        lineHeight={'110%'}
+        textAlign={'center'}
+        textTransform={'uppercase'}
+      >
+        don't hesitate to reach out
+      </Heading>
+      <Text textAlign={'center'}>
+          FILL IN THE FORM BELOW TO INSTANTLY SCHEDULE A CALL WITH US.
+        </Text>
+      <Flex w={'fit-content'} flexWrap={'wrap'}>
+        
+        <Box>
+          <Text>Discovery Call</Text>
+          <Text>30min</Text>
+          <Text>Web conferencing details provided upon confirmation.</Text>
+          <Text>
+            Schedule an initial discovery call to give us a chance to better
+            understand your needs and also give yourself a chance to learn more
+            about us.
+          </Text>
+        </Box>
+        <Box>
+          <Box>
+            
+            <Input type="date" placeholder="choose a date" />
+          </Box>
+        </Box>
+      </Flex>
+    </Box>
+  );
+}

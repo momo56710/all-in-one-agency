@@ -12,10 +12,9 @@ export default function AboutUs() {
       gridTemplateColumns={{ base: '1fr', md: '1fr 1fr' }}
       gap={'2em'}
     >
-      <motion.div ref={ref} initial={{ scale: 0 }} animate={{ scale: 1 }}>
-        {' '}
-        <Image src={webImg} height={'100%'} />
-      </motion.div>
+     
+        <Image src={webImg} />
+     
 
       <Grid alignItems={'center'} padding={{ base: '3em 0', sm: '0' }}>
         <Grid gap={'3em'} alignItems={'center'} justifyItems={'center'}>

@@ -9,11 +9,11 @@ export default function AboutUs() {
     <Box
       minH={'50vh'}
       display={'grid'}
-      gridTemplateColumns={{ base: '1fr', md: '1fr 1fr' }}
+      gridTemplateColumns={{ base: '1fr', lg: '1fr 1fr' }}
       gap={'2em'}
     >
      
-        <Image src={webImg} />
+        <Image src={webImg} height={{base : 'auto' ,lg : '100%'}}/>
      
 
       <Grid alignItems={'center'} padding={{ base: '3em 0', sm: '0' }}>

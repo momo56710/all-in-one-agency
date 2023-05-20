@@ -6,36 +6,36 @@ export default function StartupsPlans() {
   const cardsContent = [
     {
       title: 'first step',
-      price: '500',
+      price: '800',
       month: false,
       Specs: [
         'static Website',
         'logo and branding',
         '1 month subscription on first step social media management plan',
-        '1 month subscription on first step web hosting plan'
+        '1 year subscription on first step web hosting plan'
       ],
     },
     {
       title: 'Pro',
-      price: '1500',
+      price: '2500',
       month: false,
       Specs: [
         'Complete Website',
         'logo and branding',
         '3 month subscription on Pro social media management plan',
-        '3 month subscription on Pro web hosting plan'
+        '3 years subscription on Pro web hosting plan'
         
       ],
     },
     {
       title: 'intermidate',
-      price: '900',
+      price: '1300',
       month: false,
       Specs: [
         'Complete Website',
         'logo and branding',
-        '2 month subscription on Pro social media management plan',
-        '2 month subscription on Pro web hosting plan'
+        '2 month subscription on intermidate social media management plan',
+        '2 years subscription on intermidate web hosting plan'
       ],
     },
    

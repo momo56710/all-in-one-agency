@@ -15,12 +15,20 @@ export default function Cards({ title, price, Specs, month }) {
     if (price) return <Text fontSize={'3xl'}>$</Text>;
   };
   const monthCheck = month => {
-    if (month)
+   
+    if (month == 'year'){
       return (
         <Text color={'purple.900'} opacity={'0.5'} fontSize={'3xl'}>
-          /month
+          /year
         </Text>
       );
+    }
+    if (month)
+    return (
+      <Text color={'purple.900'} opacity={'0.5'} fontSize={'3xl'}>
+        /month
+      </Text>
+    );
   };
   const specsCheck = Specs => {
     if (Specs) {

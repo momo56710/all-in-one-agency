@@ -29,7 +29,7 @@ export default function Meeting() {
     <Box
       borderRadius={'lg'}
       border={'2px solid white'}
-      w={{ base: '100%', md: '70%' }}
+      w={{ base: '90%', md: '60%' }}
       templateColumns={{
         base: '1fr',
         lg: 'repeat(2, 1fr)',
@@ -83,6 +83,10 @@ export default function Meeting() {
           </Heading>
           <FormControl id="full name">
             <FormLabel>Full name</FormLabel>
+            <Input type="text" />
+          </FormControl>
+          <FormControl id="phone number">
+            <FormLabel>phone Number</FormLabel>
             <Input type="text" />
           </FormControl>
           <FormControl id="email">

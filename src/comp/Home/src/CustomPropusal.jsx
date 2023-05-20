@@ -105,8 +105,8 @@ export default function CustomPropusal() {
                       <InputLeftElement />
                       <Input
                         type="text"
-                        name="name"
-                        placeholder="phon number"
+                        name="phone number"
+                        placeholder="phone number"
                         onChange={e => {
                           payload.content.phoneNumber = e.target.value;
                         }}

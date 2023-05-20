@@ -13,10 +13,22 @@ import {
   Textarea,
   Grid,
   VStack,
+  useToast
 } from '@chakra-ui/react';
+import axios from 'axios';
 import { motion } from 'framer-motion';
-import React from 'react';
+import React, { useState } from 'react';
 export default function CustomPropusal() {
+  const toast = useToast()
+  const [payload, setPayload] = useState({
+    type: 1,
+    content: {
+      fullName: '',
+      email: '',
+      phoneNumber: '',
+      main: '',
+    },
+  });
   return (
     <Flex
       bg="white"
@@ -77,14 +89,28 @@ export default function CustomPropusal() {
                     <FormLabel>Full Name</FormLabel>
                     <InputGroup>
                       <InputLeftElement />
-                      <Input type="text" name="name" placeholder="Your Name" />
+                      <Input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        onChange={e => {
+                          payload.content.fullName = e.target.value;
+                        }}
+                      />
                     </InputGroup>
                   </FormControl>
                   <FormControl isRequired>
                     <FormLabel>Phone number</FormLabel>
                     <InputGroup>
                       <InputLeftElement />
-                      <Input type="text" name="name" placeholder="Your Name" />
+                      <Input
+                        type="text"
+                        name="name"
+                        placeholder="phon number"
+                        onChange={e => {
+                          payload.content.phoneNumber = e.target.value;
+                        }}
+                      />
                     </InputGroup>
                   </FormControl>
 
@@ -97,6 +123,9 @@ export default function CustomPropusal() {
                         type="email"
                         name="email"
                         placeholder="Your Email"
+                        onChange={e => {
+                          payload.content.email = e.target.value;
+                        }}
                       />
                     </InputGroup>
                   </FormControl>
@@ -109,6 +138,9 @@ export default function CustomPropusal() {
                       placeholder="it's can be a pdf link or a description"
                       rows={6}
                       resize="none"
+                      onChange={e => {
+                        payload.content.main = e.target.value;
+                      }}
                     />
                   </FormControl>
                   <motion.button
@@ -123,6 +155,37 @@ export default function CustomPropusal() {
                         bg: '#45276D',
                       }}
                       isFullWidth
+                      onClick={async () => {
+                        try {
+                          for (const e in payload.content) {
+                            if (!payload.content[e]) {
+                              toast({
+                                title: 'email not sent',
+                                description: `fill the form correctly please`,
+                                status: 'error',
+                                duration: 2000,
+                                isClosable: true,
+                              });
+                              return;
+                            }
+                          }
+                          toast({
+                            title: 'email sent',
+                            description: `thank you for reaching`,
+                            status: 'success',
+                            duration: 2000,
+                            isClosable: true,
+                          });
+                          console.log(payload);
+                          const res = await axios.post(
+                            'https://email-bulksup.brinisnadjib.repl.co/report',
+                            { ...payload }
+                          );
+                          console.log(res);
+                        } catch (error) {
+                          console.log(error);
+                        }
+                      }}
                     >
                       Send Message
                     </Button>
